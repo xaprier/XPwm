@@ -111,7 +111,7 @@ jobs:
         id: msys2
         with:
           msystem: ${{ matrix.sys }}
-          install: mingw-w64-${{ matrix.env }}-openssl mingw-w64-${{ matrix.env }}-glew mingw-w64-${{ matrix.env }}-mesa mingw-w64-${{ matrix.env }}-angleproject mingw-w64-${{ matrix.env }}-qt5-base mingw-w64-${{ matrix.env }}-qt5-tools mingw-w64-${{ matrix.env }}-cmake mingw-w64-${{ matrix.env }}-make mingw-w64-ucrt-${{ matrix.env }}-toolchain
+          install: mingw-w64-${{ matrix.env }}-openssl mingw-w64-${{ matrix.env }}-glew mingw-w64-${{ matrix.env }}-mesa mingw-w64-${{ matrix.env }}-angleproject mingw-w64-${{ matrix.env }}-qt5-base mingw-w64-${{ matrix.env }}-qt5-tools mingw-w64-${{ matrix.env }}-cmake mingw-w64-${{ matrix.env }}-make mingw-w64-ucrt-${{ matrix.env }}-toolchain mingw-w64-${{ matrix.env }}-qt5-svg
 
       - name: Update PowerShell PATH
         run: |
