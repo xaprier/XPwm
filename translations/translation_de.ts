@@ -738,7 +738,7 @@ Bitte melden Sie sich erneut an, um fortzufahren</translation>
         <translation>Deutsche Sprache geladen</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="13"/>
+        <location filename="../src/main.cpp" line="10"/>
         <source>Style file cannot be opened</source>
         <translation>Die Style-Datei kann nicht geöffnet werden</translation>
     </message>

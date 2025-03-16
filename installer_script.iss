@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "XPwm"
-#define MyAppVersion "1.1.5"
+#define MyAppVersion "$CHANGEMEWITHVERSION"
 #define MyAppPublisher "xaprier"
 #define MyAppURL "https://xaprier.dev"
 #define MyAppExeName "XPwm.exe"

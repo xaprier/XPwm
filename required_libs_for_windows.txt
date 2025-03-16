@@ -5,8 +5,8 @@ libwinpthread-1.dll
 libcrypto-3-x64.dll
 libmd4c.dll
 libharfbuzz-0.dll
-libicuin75.dll
-libicuuc75.dll
+libicuin76.dll
+libicuuc76.dll
 libpcre2-16-0.dll
 libpng16-16.dll
 zlib1.dll
@@ -14,7 +14,7 @@ libzstd.dll
 libglib-2.0-0.dll
 libfreetype-6.dll
 libgraphite2.dll
-libicudt75.dll
+libicudt76.dll
 libintl-8.dll
 libbz2-1.dll
 libbrotlidec.dll

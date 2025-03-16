@@ -11,6 +11,28 @@ $UpdateISSScript = Join-Path -Path $scriptDir -ChildPath "update_iss_script.ps1"
 $MoveRequiredLibsScript = Join-Path -Path $scriptDir -ChildPath "move_required_libs_for_windows.ps1"
 $outputDir = "Output"
 
+# Check for required executables
+$missingComponents = @()
+
+if (-Not (Test-Path $innoSetupPath)) {
+    $missingComponents += "Inno Setup (ISCC.exe)"
+}
+
+if (-Not (Get-Command "cmake.exe" -ErrorAction SilentlyContinue)) {
+    $missingComponents += "CMake(cmake.exe)"
+}
+
+if (-Not (Get-Command "mingw32-make.exe" -ErrorAction SilentlyContinue)) {
+    $missingComponents += "MinGW Make (mingw32-make.exe)"
+}
+
+# Warn if any component is missing
+if ($missingComponents.Count -gt 0) {
+    Write-Host "ERROR: The following required components are missing:" -ForegroundColor Red
+    $missingComponents | ForEach-Object { Write-Host "- $_" -ForegroundColor Yellow }
+    exit 1
+}
+
 # Create build directory and navigate to it
 if (-Not (Test-Path $buildDir)) {
     New-Item -Path $buildDir -ItemType Directory
@@ -20,8 +42,10 @@ Set-Location -Path $buildDir
 # Run CMake to configure the project
 cmake.exe -G "MinGW Makefiles" .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install
 
-# Build and install the project
-mingw32-make.exe install
+# Build and install the project using parallel jobs
+$cpuCount = $env:NUMBER_OF_PROCESSORS
+Write-Host "Building project with $cpuCount parallel jobs..."
+mingw32-make.exe -j $cpuCount install
 
 # Navigate to the install directory
 $navDir = Join-Path -Path $scriptDir -ChildPath $buildDir

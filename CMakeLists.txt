@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 project(
-    XPwm 
-    VERSION 1.1.5
+    XPwm
+    VERSION 1.1.6
     DESCRIPTION "Local Password manager using OpenSSL and Qt"
     HOMEPAGE_URL "https://github.com/SFENX-Group/XPwm"
     LANGUAGES CXX)
@@ -10,6 +10,7 @@ project(
 set(PROJECT_ORGANIZATION "SFENX")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 add_subdirectory(lib) # compile libs
 add_subdirectory(res) # icon and .desktop file for gnu/linux
@@ -36,14 +37,15 @@ endif()
 configure_file(./include/Config.hpp.cmake ${CMAKE_CURRENT_BINARY_DIR}/Config.hpp)
 
 # 4 - add qm file to qrc file and load it in code
-file(GLOB_RECURSE CPP_HILES "src/*.cpp")
-file(GLOB_RECURSE HPP_HILES "include/*.hpp")
-file(GLOB_RECURSE UI_HILES "design/*.ui")
-file(GLOB_RECURSE QRC_HILES "**/*.qrc")
+file(GLOB_RECURSE CPP_FILES "src/*.cpp")
+file(GLOB_RECURSE HPP_FILES "include/*.hpp")
+file(GLOB_RECURSE UI_FILES "design/*.ui")
+file(GLOB_RECURSE QRC_FILES "**/*.qrc")
+
 file(GLOB_RECURSE TS_FILES "translations/*.ts")
 
 set(PROJECT_SOURCES
-    ${CPP_HILES} ${HPP_HILES} ${UI_HILES} ${QRC_HILES}
+    ${CPP_FILES} ${HPP_FILES} ${UI_FILES} ${QRC_FILES}
 )
 
 set(LANGS tr de)
