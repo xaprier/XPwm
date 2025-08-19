@@ -83,5 +83,5 @@ You can search the application `Password Manager`
 ### ✨ Contributors
 
 <a href="https://github.com/SFENX-Group/XPwm/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=SFENX-Group/XPwm" />
+  <img style="border-radius: 50%; height: 28px;" src="https://github.com/atlaxt.png" />
 </a>
