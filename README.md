@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/SFENX-Group/XPwm/blob/main/LICENSE" target="blank">
-    <img src="https://img.shields.io/github/license/SFENX-Group/XPwm" alt="license" />
+    <img src="https://img.shields.io/github/license/xaprier/XPwm" alt="license" />
   </a>
 </p>
 
