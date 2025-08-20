@@ -10,6 +10,7 @@
 
 <b>XPwm</b> is a password manager to keep your passwords in local as encrypted with a master password using OpenSSL AES-256 and Qt.
 
+
 ### 🛠️ Build Instructions for Linux/UNIX
 
 Clone the repository to your directory
