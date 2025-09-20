@@ -81,7 +81,13 @@ You can search the application `Password Manager`
 ![](https://raw.githubusercontent.com/SFENX-Group/XPwm/main/screenshot/main.png)
 
 ### ✨ Contributors
-
-<a href="https://github.com/SFENX-Group/XPwm/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=SFENX-Group/XPwm" />
-</a>
+<p align="center">
+  <p align="center">
+    <a href="https://github.com/xaprier/XPwm/graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=xaprier/XPwm" />
+    </a>
+  </p>
+  <p align="center">
+    Made with <a href="https://contrib.rocks">contributors-img</a>
+  </p>
+</p>
